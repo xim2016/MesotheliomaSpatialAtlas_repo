@@ -195,10 +195,12 @@ def data_page():
             else:
                 filename = f"{showedCore_ids2[clicked]}_composite_image.tif"
 
-            st.write(filename)  
+            st.write(f"{dir}/{filename}")  
             # st.write(showedImage_names[clicked])
             # st.write(showedCore_ids[clicked])
             # st.write(showedCore_ids2[clicked])
+            imgfile =  Image.open(f"{dir}/{filename}")
+            show_plotly_image(imgfile, 750)
             if os.path.exists(f"{dir}/{filename}"):
                 imgfile =  Image.open(f"{dir}/{filename}")
                 show_plotly_image(imgfile, 750)
