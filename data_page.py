@@ -21,7 +21,9 @@ def get_current_checkedBox(options):
 def data_page():
     
     
-    IMG_REPO = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/H%26E_level1/'
+    REPO_HE = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/H%26E_level1/'
+    REPO_TMA = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/'
+ 
 
     max_width = '100%'
     padding_top = '0rem'
@@ -133,20 +135,20 @@ def data_page():
             st.markdown( '<p style="font-family:sans-serif; color:#002e8c; font-size: 22px;  font-weight: bold">Image type</p>',  unsafe_allow_html=True) #sans-serif   Soin Sans Pro
     
             option2dir = {"H&E": f"{IMG_REPO}",
-                        "mIF": f"{PATH_IMG_TMA}/panel1/multi",
-                        "CD4": f"{PATH_IMG_TMA}/panel1/CD4",
-                        "CD8": f"{PATH_IMG_TMA}/panel1/CD8",
-                        "CD20": f"{PATH_IMG_TMA}/panel1/CD20",
-                        "CD68": f"{PATH_IMG_TMA}/panel1/CD68",
-                        "FOXP3": f"{PATH_IMG_TMA}/panel1/FOXP3",
-                        "panCK": f"{PATH_IMG_TMA}/panel1/panCK",
-                        "mIF ": f"{PATH_IMG_TMA}/panel2/multi2",
-                        "CD56": f"{PATH_IMG_TMA}/panel2/CD56",
-                        "CD11c": f"{PATH_IMG_TMA}/panel2/CD11c",
-                        "BAP1": f"{PATH_IMG_TMA}/panel2/BAP1",
-                        "NF2": f"{PATH_IMG_TMA}/panel2/NF2",
-                        "MTAP": f"{PATH_IMG_TMA}/panel2/MTAP",
-                        "LAG3": f"{PATH_IMG_TMA}/panel2/LAG3"
+                        "mIF": f"{REPO_TMA}/panel1/multi",
+                        "CD4": f"{REPO_TMA}/panel1/CD4",
+                        "CD8": f"{REPO_TMA}/panel1/CD8",
+                        "CD20": f"{REPO_TMA}/panel1/CD20",
+                        "CD68": f"{REPO_TMA}/panel1/CD68",
+                        "FOXP3": f"{REPO_TMA}/panel1/FOXP3",
+                        "panCK": f"{REPO_TMA}/panel1/panCK",
+                        "mIF ": f"{REPO_TMA}/panel2/multi2",
+                        "CD56": f"{REPO_TMA}/panel2/CD56",
+                        "CD11c": f"{REPO_TMA}/panel2/CD11c",
+                        "BAP1": f"{REPO_TMA}/panel2/BAP1",
+                        "NF2": f"{REPO_TMA}/panel2/NF2",
+                        "MTAP": f"{REPO_TMA}/panel2/MTAP",
+                        "LAG3": f"{REPO_TMA}/panel2/LAG3"
             }
 
 
