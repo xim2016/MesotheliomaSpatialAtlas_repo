@@ -21,7 +21,7 @@ def get_current_checkedBox(options):
 def data_page():
     
     
-    IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/MesotheliomaSpatialAtlas_data/main/H%26E_level1/'
+    IMG_REPO = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/H%26E_level1/'
 
     max_width = '100%'
     padding_top = '0rem'

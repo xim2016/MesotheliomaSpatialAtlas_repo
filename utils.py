@@ -17,8 +17,8 @@ from pathlib import Path
 #         imgID_to_coreID[imgID] = coreID
 #         coreID_to_imgID[coreID] = imgID
 #     return(imgID_to_coreID, coreID_to_imgID)   
-LOGO_REPO1 = 'https://raw.githubusercontent.com/osmanbeyoglulab/MesotheliomaSpatialAtlas_data/main/panel1_logo4/'
-LOGO_REPO2 = 'https://raw.githubusercontent.com/osmanbeyoglulab/MesotheliomaSpatialAtlas_data/main/panel2_logo4/'
+LOGO_REPO1 = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/panel1_logo4/'
+LOGO_REPO2 = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/panel2_logo4/'
 
 def get_orderedList(opt):
     list_order = { 
