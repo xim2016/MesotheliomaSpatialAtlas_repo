@@ -194,7 +194,8 @@ def data_page():
                 filename = f"{showedCore_ids[clicked]}_composite_image.tif"
             else:
                 filename = f"{showedCore_ids2[clicked]}_composite_image.tif"
-                
+
+            st.write(filename)  
             # st.write(showedImage_names[clicked])
             # st.write(showedCore_ids[clicked])
             # st.write(showedCore_ids2[clicked])
