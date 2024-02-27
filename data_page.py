@@ -134,7 +134,7 @@ def data_page():
             # st.markdown("#### Image type")
             st.markdown( '<p style="font-family:sans-serif; color:#002e8c; font-size: 22px;  font-weight: bold">Image type</p>',  unsafe_allow_html=True) #sans-serif   Soin Sans Pro
     
-            option2dir = {"H&E": f"{IMG_REPO}",
+            option2dir = {"H&E": f"{REPO_HE}",
                         "mIF": f"{REPO_TMA}/panel1/multi",
                         "CD4": f"{REPO_TMA}/panel1/CD4",
                         "CD8": f"{REPO_TMA}/panel1/CD8",
