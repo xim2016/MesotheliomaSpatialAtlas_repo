@@ -208,13 +208,13 @@ def data_page():
 
             # st.write(imgfile)
             # st.image(imgfile)
-            show_plotly_image(imgurl, 750)
-            # if exists(imgurl):
-            #     show_plotly_image(imgurl, 750)
-            # else:
-            #     st.markdown("#")
-            #     info = '<p style="font-size: 16px; font-weight: bold;text-align: center">Image datas is not available for this core.</p>'  #sans-serif   Soin Sans Pro
-            #     st.markdown(info, unsafe_allow_html=True)
+            # show_plotly_image(imgurl, 750)
+            if exists(imgurl):
+                show_plotly_image(imgurl, 750)
+            else:
+                st.markdown("#")
+                info = '<p style="font-size: 16px; font-weight: bold;text-align: center">Image datas is not available for this core.</p>'  #sans-serif   Soin Sans Pro
+                st.markdown(info, unsafe_allow_html=True)
 
 
         
