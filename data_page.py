@@ -196,7 +196,7 @@ def data_page():
                 filename = f"{showedCore_ids2[clicked]}_composite_image.tif"
 
             imgurl = f"{dir}/{filename}"
-            st.write(imgurl)  
+             
             # st.write(showedImage_names[clicked])
             # st.write(showedCore_ids[clicked])
             # st.write(showedCore_ids2[clicked])
