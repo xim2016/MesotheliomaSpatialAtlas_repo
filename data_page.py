@@ -191,9 +191,9 @@ def data_page():
             if option == "H&E":
                 filename = f"{showedImage_names[clicked]}.jpg"
             elif option in vargs1 :   
-                filename = f"{showedCore_ids[clicked]}_composite_image.tif"
+                filename = f"{showedCore_ids[clicked]}_composite_image.jpg"
             else:
-                filename = f"{showedCore_ids2[clicked]}_composite_image.tif"
+                filename = f"{showedCore_ids2[clicked]}_composite_image.jpg"
 
             imgurl = f"{dir}/{filename}"
              
@@ -207,11 +207,11 @@ def data_page():
                 return r.status_code == requests.codes.ok
             
             def is_url_image(image_url):
-                image_formats = ("image/png", "image/tif", "image/jpg")
+                image_formats = ("image/png", "image/jpg")
                 r = requests.head(image_url)
                 # st.write(r.headers["content-type"])
                 # if r.headers["content-type"] in image_formats:
-                if r.headers["content-type"]:
+                if r.headers["content-type"] in image_formats:
                     return True
                 return False
 

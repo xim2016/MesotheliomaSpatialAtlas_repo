@@ -213,7 +213,7 @@ def show_plotly_image(img_file, height=750):
     img_file = img_file.replace(" ", "%20")
     st.write(img_file)
 
-    img = iio.mimread(img_file)
+    img = iio.imread(img_file)
     # img = np.array(Image.open(io.BytesIO(img_file)))
     fig = px.imshow(img, binary_string=True)
     fig.update_xaxes(showgrid=False, showticklabels=False)
