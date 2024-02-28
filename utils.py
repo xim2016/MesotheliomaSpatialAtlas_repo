@@ -206,8 +206,11 @@ def get_imageNames(cs1, cs2, c1_IDs, c2_IDs):
     
     
 def show_plotly_image(img_file, height=750):
- 
-    img = np.array(img_file.convert('RGB'))
+    
+    # img = np.array(img_file.convert('RGB'))
+    from PIL import Image
+    import io
+    img = np.array(Image.open(io.BytesIO(img_file)))
     fig = px.imshow(img, binary_string=True)
     fig.update_xaxes(showgrid=False, showticklabels=False)
     fig.update_yaxes(showgrid=False, showticklabels=False)
