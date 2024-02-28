@@ -208,7 +208,7 @@ def data_page():
 
             # st.write(imgfile)
             # st.image(imgfile)
-            show_plotly_image(imgfile, 750)
+            show_plotly_image(imgurl, 750)
             
             if os.path.exists(imgfile):
                 imgfile =  Image.open(f"{dir}/{filename}")
