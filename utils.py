@@ -209,7 +209,10 @@ def show_plotly_image(img_file, height=750):
     
     # img = np.array(img_file.convert('RGB'))
     import imageio.v3 as iio
+    
     img_file = img_file.replace(" ", "%20")
+    # st.write(img_file)
+
     img = iio.imread(img_file)
     # img = np.array(Image.open(io.BytesIO(img_file)))
     fig = px.imshow(img, binary_string=True)
