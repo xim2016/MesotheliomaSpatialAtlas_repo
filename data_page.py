@@ -207,7 +207,7 @@ def data_page():
             imgfile =  BytesIO(r.content)
 
 
-          
+            st.image(imgfile)
             show_plotly_image(imgfile, 750)
             
             if os.path.exists(imgfile):
