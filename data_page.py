@@ -207,7 +207,7 @@ def data_page():
                 return r.status_code == requests.codes.ok
             
             def is_url_image(image_url):
-                image_formats = ("image/png", "image/jpeg", "image/jpg")
+                image_formats = ("image/png", "image/tif", "image/jpg")
                 r = requests.head(image_url)
                 if r.headers["content-type"] in image_formats:
                     return True
