@@ -208,7 +208,7 @@ def get_imageNames(cs1, cs2, c1_IDs, c2_IDs):
 def show_plotly_image(img_file, height=750):
     
     # img = np.array(img_file.convert('RGB'))
-    import imageio.v3 as iio
+    import imageio as iio
     
     img_file = img_file.replace(" ", "%20")
     st.write(img_file)
