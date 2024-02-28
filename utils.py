@@ -129,7 +129,7 @@ def load_clickable_coreImages(HE_id, panel1_id, panel2_id):
 
     for chanel in p1s:
         file = f"{PATH_panel1_logo}/{chanel}/{panel1_id}.png"
-
+        st.write(file)
         # if not os.path.isfile(file):
         #     file = logo_NA
         with open(file, "rb") as image:
@@ -139,6 +139,7 @@ def load_clickable_coreImages(HE_id, panel1_id, panel2_id):
     
     for chanel in p2s:
         file = f"{PATH_panel2_logo}/{chanel}/{panel2_id}.png"
+        st.write(file)
         if not os.path.isfile(file):
             file = logo_NA
         with open(file, "rb") as image:
