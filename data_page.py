@@ -195,14 +195,22 @@ def data_page():
             else:
                 filename = f"{showedCore_ids2[clicked]}_composite_image.tif"
 
-            imgfile = f"{dir}/{filename}"
-            st.write(imgfile)  
+            imgurl = f"{dir}/{filename}"
+            st.write(imgurl)  
             # st.write(showedImage_names[clicked])
             # st.write(showedCore_ids[clicked])
             # st.write(showedCore_ids2[clicked])
-            st.image(imgfile)
-           
-            if os.path.exists(f"{dir}/{filename}"):
+            
+            from io import BytesIO
+            import requests
+            r = requests.get(imgurl)
+            imgfile =  BytesIO(r.content)
+
+
+            image = Image.open(io_stream)
+            show_plotly_image(imgfile, 750)
+            
+            if os.path.exists(imgfile):
                 imgfile =  Image.open(f"{dir}/{filename}")
                 show_plotly_image(imgfile, 750)
             else:
