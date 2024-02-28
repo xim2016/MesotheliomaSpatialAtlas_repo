@@ -209,8 +209,9 @@ def data_page():
             def is_url_image(image_url):
                 image_formats = ("image/png", "image/tif", "image/jpg")
                 r = requests.head(image_url)
-                st.write(r.headers["content-type"])
-                if r.headers["content-type"] in image_formats:
+                # st.write(r.headers["content-type"])
+                # if r.headers["content-type"] in image_formats:
+                if r.headers["content-type"]:
                     return True
                 return False
 
