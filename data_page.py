@@ -205,11 +205,18 @@ def data_page():
             def exists(path):
                 r = requests.head(path)
                 return r.status_code == requests.codes.ok
+            
+            def is_url_image(image_url):
+                image_formats = ("image/png", "image/jpeg", "image/jpg")
+                r = requests.head(image_url)
+                if r.headers["content-type"] in image_formats:
+                    return True
+                return False
 
             # st.write(imgfile)
             # st.image(imgfile)
             # show_plotly_image(imgurl, 750)
-            if exists(imgurl):
+            if is_url_image(imgurl):
                 show_plotly_image(imgurl, 750)
             else:
                 st.markdown("#")
