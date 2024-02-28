@@ -22,7 +22,7 @@ def data_page():
     
     
     REPO_HE = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/H%26E_level1/'
-    REPO_TMA = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/'
+    REPO_TMA = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main'
  
 
     max_width = '100%'
