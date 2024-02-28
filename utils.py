@@ -128,7 +128,7 @@ def load_clickable_coreImages(HE_id, panel1_id, panel2_id):
         images["H&E"]=(f"data:image/jpeg;base64,{encoded}")
 
     for chanel in p1s:
-        file = f"{LOGO_REPO1}/{chanel}/{panel1_id}.png"
+        file = f"{PATH_panel1_logo}/{chanel}/{panel1_id}.png"
 
         # if not os.path.isfile(file):
         #     file = logo_NA
@@ -138,7 +138,7 @@ def load_clickable_coreImages(HE_id, panel1_id, panel2_id):
             images[label]=(f"data:image/jpeg;base64,{encoded}")
     
     for chanel in p2s:
-        file = f"{LOGO_REPO2}/{chanel}/{panel2_id}.png"
+        file = f"{PATH_panel2_logo}/{chanel}/{panel2_id}.png"
         if not os.path.isfile(file):
             file = logo_NA
         with open(file, "rb") as image:
@@ -166,7 +166,7 @@ def load_coreImages(HE_id, panel1_id, panel2_id):
         images["H&E"]=(f"<img src= 'data:image/png;base64,{encoded}' class='img-fluid' style='width:100%'>")
 
     for chanel in p1s:
-        file = f"{LOGO_REPO1}/{chanel}/{panel1_id}.png"
+        file = f"{PATH_panel1_logo}/{chanel}/{panel1_id}.png"
         if not os.path.isfile(file):
             file = logo_NA
         with open(file, "rb") as image:
@@ -175,7 +175,7 @@ def load_coreImages(HE_id, panel1_id, panel2_id):
             images[label]=(f"<img src= 'data:image/png;base64,{encoded}' class='img-fluid' style='width:100%'>")
     
     for chanel in p2s:
-        file = f"{LOGO_REPO2}/{chanel}/{panel2_id}.png"
+        file = f"{PATH_panel2_logo}/{chanel}/{panel2_id}.png"
         if not os.path.isfile(file):
             file = logo_NA
         with open(file, "rb") as image:
