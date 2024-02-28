@@ -56,12 +56,12 @@ def name_coverter(opt):
     }
     return(name_coverter[opt])
 
-@st.cache_data
+# @st.cache_data
 def load_metadata():
     df =  pd.read_csv("./data/mapping_nameCLeaned_wImgID.csv")
     return(df)
 
-@st.cache_data
+# @st.cache_data
 def load_coreFeature():
     df = pd.read_csv("./data/core_features_allMarkers_withIntensity_alCores_forWebPortal.csv", index_col=0)
     return(df)
