@@ -201,22 +201,20 @@ def data_page():
             # st.write(showedCore_ids[clicked])
             # st.write(showedCore_ids2[clicked])
             
-            from io import BytesIO
             import requests
-            r = requests.get(imgurl)
-            imgfile =  BytesIO(r.content)
+            def exists(path):
+                r = requests.head(path)
+                return r.status_code == requests.codes.ok
 
             # st.write(imgfile)
             # st.image(imgfile)
             show_plotly_image(imgurl, 750)
-            
-            if os.path.exists(imgfile):
-                imgfile =  Image.open(f"{dir}/{filename}")
-                show_plotly_image(imgfile, 750)
-            else:
-                st.markdown("#")
-                info = '<p style="font-size: 16px; font-weight: bold;text-align: center">Image datas is not available for this core.</p>'  #sans-serif   Soin Sans Pro
-                st.markdown(info, unsafe_allow_html=True)
+            # if exists(imgurl):
+            #     show_plotly_image(imgurl, 750)
+            # else:
+            #     st.markdown("#")
+            #     info = '<p style="font-size: 16px; font-weight: bold;text-align: center">Image datas is not available for this core.</p>'  #sans-serif   Soin Sans Pro
+            #     st.markdown(info, unsafe_allow_html=True)
 
 
         
