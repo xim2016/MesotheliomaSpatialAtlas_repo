@@ -4,7 +4,7 @@ from PIL import Image
 from utils import get_orderedList, get_imageNames, load_HEImages, load_coreImages, show_plotly_image, get_core_feature, get_coreStatistic
 from style import define_layout
 import os
-
+import requests
 
 def disable_other_checkboxes(*other_checkboxes_keys):
     # if current one is trun to false, reset it to true
@@ -201,7 +201,7 @@ def data_page():
             # st.write(showedCore_ids[clicked])
             # st.write(showedCore_ids2[clicked])
             
-            import requests
+            
             def exists(path):
                 r = requests.head(path)
                 return r.status_code == requests.codes.ok
