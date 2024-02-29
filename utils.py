@@ -212,7 +212,8 @@ def show_plotly_image(img_file, height=750):
     import imageio as iio
     
     img_file = img_file.replace(" ", "%20")
-    st.write(img_file)
+    img_file = img_file.replace("#", "%23")
+    # st.write(img_file)
 
     img = iio.imread(img_file)
     # img = np.array(Image.open(io.BytesIO(img_file)))

@@ -21,7 +21,7 @@ def get_current_checkedBox(options):
 def data_page():
     
     
-    REPO_HE = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/H%26E_level1/'
+    REPO_HE = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/H%26E_level1'
     REPO_TMA = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main'
  
 
@@ -211,7 +211,7 @@ def data_page():
                 r = requests.head(image_url)
                 # st.write(r.headers["content-type"])
                 # if r.headers["content-type"] in image_formats:
-                if r.headers["content-type"] in image_formats:
+                if r.headers["content-type"]: #in image_formats:
                     return True
                 return False
 
