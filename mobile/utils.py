@@ -88,7 +88,7 @@ def load_HEImages(path_img_logo, image_names, core_ids, core_ids2):
         core_id = core_ids[i]
         core_id2 = core_ids2[i]
 
-        file = f"{path_img_logo}/{image_name}.png"
+        file = f"{path_img_logo}/{image_name}.jpg"
 
         if not os.path.exists(file):
             # st.write(f"{image_name} file not exist")
@@ -107,7 +107,7 @@ def load_HEImages(path_img_logo, image_names, core_ids, core_ids2):
 
 def load_clickable_coreImages(HE_id, panel1_id, panel2_id):
     
-    logo_NA = "./assets/figures/logo_NA.png"
+    logo_NA = "./assets/figures/logo_NA.jpg"
 
     PATH_HE_logo = "./data/core_image/H&E_logo" 
     PATH_panel1_logo = "./data/core_image/panel1_logo4" 
@@ -118,13 +118,13 @@ def load_clickable_coreImages(HE_id, panel1_id, panel2_id):
 
     images = {}
 
-    file = f"{PATH_HE_logo}/{HE_id}.png"
+    file = f"{PATH_HE_logo}/{HE_id}.jpg"
     with open(file, "rb") as image:
         encoded = base64.b64encode(image.read()).decode()
         images["H&E"]=(f"data:image/jpeg;base64,{encoded}")
 
     for chanel in p1s:
-        file = f"{PATH_panel1_logo}/{chanel}/{panel1_id}.png"
+        file = f"{PATH_panel1_logo}/{chanel}/{panel1_id}.jpg"
         if not os.path.isfile(file):
             file = logo_NA
         with open(file, "rb") as image:
@@ -133,7 +133,7 @@ def load_clickable_coreImages(HE_id, panel1_id, panel2_id):
             images[label]=(f"data:image/jpeg;base64,{encoded}")
     
     for chanel in p2s:
-        file = f"{PATH_panel2_logo}/{chanel}/{panel2_id}.png"
+        file = f"{PATH_panel2_logo}/{chanel}/{panel2_id}.jpg"
         if not os.path.isfile(file):
             file = logo_NA
         with open(file, "rb") as image:
@@ -144,7 +144,7 @@ def load_clickable_coreImages(HE_id, panel1_id, panel2_id):
 
 def load_coreImages(HE_id, panel1_id, panel2_id):
     
-    logo_NA = "./assets/figures/logo_NA.png"
+    logo_NA = "./assets/figures/logo_NA.jpg"
 
     PATH_HE_logo = "./data/core_image/H&E_logo" 
     PATH_panel1_logo = "./data/core_image/panel1_logo4" 
@@ -155,13 +155,13 @@ def load_coreImages(HE_id, panel1_id, panel2_id):
 
     images = {}
 
-    file = f"{PATH_HE_logo}/{HE_id}.png"
+    file = f"{PATH_HE_logo}/{HE_id}.jpg"
     with open(file, "rb") as image:
         encoded = base64.b64encode(image.read()).decode()
         images["H&E"]=(f"<img src= 'data:image/png;base64,{encoded}' class='img-fluid' style='width:60px'>")
 
     for chanel in p1s:
-        file = f"{PATH_panel1_logo}/{chanel}/{panel1_id}.png"
+        file = f"{PATH_panel1_logo}/{chanel}/{panel1_id}.jpg"
         if not os.path.isfile(file):
             file = logo_NA
         with open(file, "rb") as image:
@@ -170,7 +170,7 @@ def load_coreImages(HE_id, panel1_id, panel2_id):
             images[label]=(f"<img src= 'data:image/png;base64,{encoded}' class='img-fluid' style='width:60px'>")
     
     for chanel in p2s:
-        file = f"{PATH_panel2_logo}/{chanel}/{panel2_id}.png"
+        file = f"{PATH_panel2_logo}/{chanel}/{panel2_id}.jpg"
         if not os.path.isfile(file):
             file = logo_NA
         with open(file, "rb") as image:
@@ -270,15 +270,15 @@ def generat_logo_images():
 
     notFound = []
     for file in image_list:
-        pathfile = f"{path_img_big_all}/{file}.png"
+        pathfile = f"{path_img_big_all}/{file}.jpg"
         if not os.path.isfile(pathfile):
             notFound.append(file)
             continue
         im = Image.open(pathfile)
-        im.save(f"{path_img_big}/{file}.png")
+        im.save(f"{path_img_big}/{file}.jpg")
         
         im = im.resize((100,100), Image.LANCZOS)
-        im.save(f"{path_img_logo}/{file}.png")
+        im.save(f"{path_img_logo}/{file}.jpg")
     print(notFound)
 
 
