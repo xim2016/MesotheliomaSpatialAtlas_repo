@@ -4,7 +4,7 @@ from st_clickable_images import clickable_images
 from PIL import Image
 from mobile.utils import get_orderedList, get_imageNames, load_HEImages, load_coreImages, show_plotly_image, get_core_feature, get_coreStatistic
 from mobile.style import define_layout
-
+import requests
 
 
 def disable_other_checkboxes(*other_checkboxes_keys):
@@ -205,16 +205,26 @@ def data_page():
             if option == "H&E":
                 filename = f"{showedImage_names[clicked]}.jpg"
             elif option in vargs1 :   
-                filename = f"{showedCore_ids[clicked]}_composite_image.tif"
+                filename = f"{showedCore_ids[clicked]}_composite_image.jpg"
             else:
-                filename = f"{showedCore_ids2[clicked]}_composite_image.tif"
+                filename = f"{showedCore_ids2[clicked]}_composite_image.jpg"
                 
-            # st.write(showedImage_names[clicked])
-            # st.write(showedCore_ids[clicked])
-            # st.write(showedCore_ids2[clicked])
-            if os.path.exists(f"{dir}/{filename}"):
-                imgfile =  Image.open(f"{dir}/{filename}")
-                show_plotly_image(imgfile, 400)
+            imgurl = f"{dir}/{filename}"
+             
+            def exists(path): #not used
+                r = requests.head(path)
+                return r.status_code == requests.codes.ok
+            
+            def is_url_image(image_url):
+                image_formats = ("image/png", "image/jpeg")
+                r = requests.head(image_url)
+                # st.write(r.headers["content-type"])
+                if r.headers["content-type"] in image_formats:
+                    return True
+                return False
+
+            if is_url_image(imgurl):
+                show_plotly_image(imgurl, 750)
             else:
                 # st.markdown("#")
                 info = '<p style="font-size: 16px; font-weight: bold;text-align: center">Image datas is not available for this core.</p>'  #sans-serif   Soin Sans Pro

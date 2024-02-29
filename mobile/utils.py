@@ -5,7 +5,7 @@ import os
 import base64
 import plotly.express as px
 from pathlib import Path
-
+import imageio as iio
 
 # @st.cache_data
 # def convert_ID():
@@ -202,7 +202,11 @@ def get_imageNames(cs1, cs2, c1_IDs, c2_IDs):
     
 def show_plotly_image(img_file, height=750):
  
-    img = np.array(img_file.convert('RGB'))
+    # img = np.array(img_file.convert('RGB'))
+    img_file = img_file.replace(" ", "%20")
+    img_file = img_file.replace("#", "%23")
+    img = iio.imread(img_file)
+
     fig = px.imshow(img, binary_string=True)
     fig.update_xaxes(showgrid=False, showticklabels=False)
     fig.update_yaxes(showgrid=False, showticklabels=False)
