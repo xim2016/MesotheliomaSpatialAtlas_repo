@@ -208,13 +208,6 @@ def get_imageNames(cs1, cs2, c1_IDs, c2_IDs):
     
 def show_plotly_image(img_file, height=750):
     
-    # img = np.array(img_file.convert('RGB'))
-    
-    
-    img_file = img_file.replace(" ", "%20")
-    img_file = img_file.replace("#", "%23")
-    # st.write(img_file)
-
     img = iio.imread(img_file)
     # img = np.array(Image.open(io.BytesIO(img_file)))
     fig = px.imshow(img, binary_string=True)

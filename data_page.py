@@ -196,28 +196,21 @@ def data_page():
                 filename = f"{showedCore_ids2[clicked]}_composite_image.jpg"
 
             imgurl = f"{dir}/{filename}"
-             
-            # st.write(showedImage_names[clicked])
-            # st.write(showedCore_ids[clicked])
-            # st.write(showedCore_ids2[clicked])
-            
-            
-            def exists(path):
+            imgurl = imgurl.replace(" ", "%20") # replace space
+            imgurl = imgurl.replace("#", "%23") # replace # 
+
+            def exists(path): #not used
                 r = requests.head(path)
                 return r.status_code == requests.codes.ok
             
             def is_url_image(image_url):
-                image_formats = ("image/png", "image/jpg")
+                image_formats = ("image/png", "image/jpeg")
                 r = requests.head(image_url)
                 # st.write(r.headers["content-type"])
-                # if r.headers["content-type"] in image_formats:
-                if r.headers["content-type"]: #in image_formats:
+                if r.headers["content-type"] in image_formats:
                     return True
                 return False
 
-            # st.write(imgfile)
-            # st.image(imgfile)
-            # show_plotly_image(imgurl, 750)
             if is_url_image(imgurl):
                 show_plotly_image(imgurl, 750)
             else:

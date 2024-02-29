@@ -6,6 +6,9 @@ from mobile.utils import get_orderedList, get_imageNames, load_HEImages, load_co
 from mobile.style import define_layout
 import requests
 
+REPO_HE = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main/H%26E_level1'
+REPO_TMA = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main'
+ 
 
 def disable_other_checkboxes(*other_checkboxes_keys):
     # if current one is trun to false, reset it to true
@@ -123,21 +126,21 @@ def data_page():
             vargs2 = ["(Panel-Protein) mIF ", "(Panel-Protein) CD56", "(Panel-Protein) CD11c", "(Panel-Protein) BAP1","(Panel-Protein) NF2", "(Panel-Protein) MTAP","(Panel-Protein) LAG3"] 
             vargs = vargs0 +  vargs1 + vargs2   
 
-            option2dir = {"H&E": f"{PATH_IMG_HE}",
-                        "(Panel-Marker) mIF": f"{PATH_IMG_TMA}/panel1/multi",
-                        "(Panel-Marker) CD4": f"{PATH_IMG_TMA}/panel1/CD4",
-                        "(Panel-Marker) CD8": f"{PATH_IMG_TMA}/panel1/CD8",
-                        "(Panel-Marker) CD20": f"{PATH_IMG_TMA}/panel1/CD20",
-                        "(Panel-Marker) CD68": f"{PATH_IMG_TMA}/panel1/CD68",
-                        "(Panel-Marker) FOXP3": f"{PATH_IMG_TMA}/panel1/FOXP3",
-                        "(Panel-Marker) panCK": f"{PATH_IMG_TMA}/panel1/panCK",
-                        "(Panel-Protein) mIF ": f"{PATH_IMG_TMA}/panel2/multi2",
-                        "(Panel-Protein) CD56": f"{PATH_IMG_TMA}/panel2/CD56",
-                        "(Panel-Protein) CD11c": f"{PATH_IMG_TMA}/panel2/CD11c",
-                        "(Panel-Protein) BAP1": f"{PATH_IMG_TMA}/panel2/BAP1",
-                        "(Panel-Protein) NF2": f"{PATH_IMG_TMA}/panel2/NF2",
-                        "(Panel-Protein) MTAP": f"{PATH_IMG_TMA}/panel2/MTAP",
-                        "(Panel-Protein) LAG3": f"{PATH_IMG_TMA}/panel2/LAG3"
+            option2dir = {"H&E": f"{REPO_HE}",
+                        "(Panel-Marker) mIF": f"{REPO_TMA}/panel1/multi",
+                        "(Panel-Marker) CD4": f"{REPO_TMA}/panel1/CD4",
+                        "(Panel-Marker) CD8": f"{REPO_TMA}/panel1/CD8",
+                        "(Panel-Marker) CD20": f"{REPO_TMA}/panel1/CD20",
+                        "(Panel-Marker) CD68": f"{REPO_TMA}/panel1/CD68",
+                        "(Panel-Marker) FOXP3": f"{REPO_TMA}/panel1/FOXP3",
+                        "(Panel-Marker) panCK": f"{REPO_TMA}/panel1/panCK",
+                        "(Panel-Protein) mIF ": f"{REPO_TMA}/panel2/multi2",
+                        "(Panel-Protein) CD56": f"{REPO_TMA}/panel2/CD56",
+                        "(Panel-Protein) CD11c": f"{REPO_TMA}/panel2/CD11c",
+                        "(Panel-Protein) BAP1": f"{REPO_TMA}/panel2/BAP1",
+                        "(Panel-Protein) NF2": f"{REPO_TMA}/panel2/NF2",
+                        "(Panel-Protein) MTAP": f"{REPO_TMA}/panel2/MTAP",
+                        "(Panel-Protein) LAG3": f"{REPO_TMA}/panel2/LAG3"
             }
 
 
@@ -210,7 +213,9 @@ def data_page():
                 filename = f"{showedCore_ids2[clicked]}_composite_image.jpg"
                 
             imgurl = f"{dir}/{filename}"
-             
+            imgurl = imgurl.replace(" ", "%20") # replace space
+            imgurl = imgurl.replace("#", "%23") # replace #
+
             def exists(path): #not used
                 r = requests.head(path)
                 return r.status_code == requests.codes.ok
@@ -218,6 +223,7 @@ def data_page():
             def is_url_image(image_url):
                 image_formats = ("image/png", "image/jpeg")
                 r = requests.head(image_url)
+                # st.write(image_url)
                 # st.write(r.headers["content-type"])
                 if r.headers["content-type"] in image_formats:
                     return True
