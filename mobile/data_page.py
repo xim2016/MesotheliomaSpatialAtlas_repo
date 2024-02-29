@@ -230,7 +230,7 @@ def data_page():
                 return False
 
             if is_url_image(imgurl):
-                show_plotly_image(imgurl, 750)
+                show_plotly_image(imgurl, 400)
             else:
                 # st.markdown("#")
                 info = '<p style="font-size: 16px; font-weight: bold;text-align: center">Image datas is not available for this core.</p>'  #sans-serif   Soin Sans Pro
