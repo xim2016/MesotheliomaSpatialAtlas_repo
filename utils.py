@@ -228,7 +228,7 @@ def show_plotly_image(img_file, height=750):
                                         'drawrect',
                                         'eraseshape'
                                        ]}
-    st.plotly_chart(fig, use_container_width=True, height=height, config=config)
+    st.plotly_chart(fig, use_container_width=True, height=height) #, config=config)
     
     
 def get_core_feature(c1_IDs, c2_IDs, core_id):
