@@ -218,10 +218,10 @@ def show_plotly_image(img_file, height=750):
                       dragmode=False)
     config = {'displayModeBar': True,
               'displaylogo': False,
-              'scrollZoom': False,
+              'scrollZoom': True,
               'toImageButtonOptions': { 'height': None, 'width': None, 
                                        'filename': 'core_img',},
-               'modeBarButtonsToRemove': ['zoom', 'resetScale'],
+               'modeBarButtonsToRemove': ['zoom', 'resetScale', 'fullscreen'],
                'modeBarButtonsToAdd': ['drawline',
                                         'drawopenpath',
                                         'drawclosedpath',
