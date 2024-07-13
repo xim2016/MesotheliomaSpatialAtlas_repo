@@ -85,6 +85,8 @@ def data_page():
 
         if len(images) > 0 :
             st.markdown("### Please select a core.", True)
+            st.write("")
+
             # st.markdown(f"##### ( {len(images)} cores )", True)
             
             clicked = clickable_images(
