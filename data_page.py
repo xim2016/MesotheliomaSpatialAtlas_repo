@@ -48,7 +48,6 @@ def data_page():
     """, unsafe_allow_html=True)
 
     PATH_IMG_TMA = "./data/core_image"
-    
     PATH_IMG_HE = "./data/core_image/H&E_level1"  
     path_img_logo = "./data/core_image/H&E_logo" 
 
