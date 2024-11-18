@@ -26,7 +26,7 @@ with open( "font.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 max_width = 2000
-padding_top = 1.7
+padding_top = 0.5
 padding_right = 0
 padding_left =  0
 padding_bottom = 0
