@@ -46,24 +46,30 @@ st.markdown(f"""
 st.markdown(
     """
     <style>
+        /* Remove padding from Streamlit default layout */
         .block-container {
             padding-top: 0rem !important;
         }
 
-        header[data-testid="stHeader"] {
-            margin-top: 0rem;
-            padding-top: 0rem;
+        /* Remove margin from Hydralit nav bar if present */
+        .hydralit-navbar {
+            margin-bottom: 0rem !important;
         }
 
+        /* Adjust Streamlit main content positioning */
         .main {
-            padding-top: 0rem;
+            padding-top: 0rem !important;
+        }
+
+        /* Attempt to target specific nav elements */
+        nav {
+            margin-bottom: 0rem !important;
         }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-st.set_page_config(layout="wide", initial_sidebar_state="auto")
 
 menu_data = [
         {'icon': "🏠", 'label':"About"},
