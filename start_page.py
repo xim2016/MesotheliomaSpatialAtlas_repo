@@ -20,6 +20,9 @@ max_width_str = f"max-width: {80}%;"
 st.markdown(f"""
         <style>
         .appview-container .main .block-container{{{max_width_str}}}
+        .block-container {
+           padding-top: 0rem;
+       }
         </style>
         """,
         unsafe_allow_html=True,
