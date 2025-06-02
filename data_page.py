@@ -17,7 +17,18 @@ def disable_other_checkboxes(*other_checkboxes_keys):
 def get_current_checkedBox(options):
     key = list(options.keys())[list(options.values()).index(True)]
     return (key)      
-        
+
+
+max_width_str = f"max-width: {95}%;"
+st.markdown(f"""
+        <style>
+        .appview-container .main .block-container{{{max_width_str}}}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def data_page():
     
     
