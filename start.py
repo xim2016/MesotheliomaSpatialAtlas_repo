@@ -43,32 +43,18 @@ st.markdown(f"""
         unsafe_allow_html=True,
     )
 
-st.markdown(
-    """
-    <style>
-        /* Remove padding from Streamlit default layout */
-        .block-container {
-            padding-top: 0rem !important;
-        }
-
-        /* Remove margin from Hydralit nav bar if present */
-        .hydralit-navbar {
-            margin-bottom: 0rem !important;
-        }
-
-        /* Adjust Streamlit main content positioning */
-        .main {
-            padding-top: 0rem !important;
-        }
-
-        /* Attempt to target specific nav elements */
-        nav {
-            margin-bottom: 0rem !important;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+hide_default_format = """
+       <style>
+       .block-container {
+           padding-top: 0rem;
+       }
+       header[data-testid="stHeader"] {
+           display: none;
+       }
+       footer {visibility: hidden;}
+       </style>
+       """
+st.markdown(hide_default_format, unsafe_allow_html=True)
 
 
 menu_data = [
@@ -86,7 +72,7 @@ chosen_tab = hc.nav_bar(
         override_theme=over_theme,
         use_animation= bool(True),
         hide_streamlit_markers=bool(True), 
-        # sticky_mode='pinned'
+        sticky_mode='sticky'
     )
 
 
