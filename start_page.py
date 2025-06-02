@@ -40,7 +40,7 @@ def start_page():
             menu_definition=menu_data,
             override_theme=over_theme,
             hide_streamlit_markers=False, 
-            # sticky_mode='pinned'
+            sticky_mode='sticky'
         )
 
 
