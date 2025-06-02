@@ -66,14 +66,14 @@ chosen_tab = hc.nav_bar(
 # padding_bottom = 0
 # define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
     
-# max_width_str = f"max-width: {80}%;"
-# st.markdown(f"""
-#         <style>
-#         .appview-container .main .block-container{{{max_width_str}}},
-#         </style>
-#         """,
-#         unsafe_allow_html=True,
-#     )
+max_width_str = f"max-width: {50}%;"
+st.markdown(f"""
+        <style>
+        .appview-container .main .block-container{{{max_width_str}}},
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # hide_default_format = """
 #        <style>
