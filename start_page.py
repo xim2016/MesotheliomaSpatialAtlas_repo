@@ -16,7 +16,7 @@ st.set_page_config(
         # initial_sidebar_state="collapsed",
 )
 
-max_width_str = f"max-width: {50}%;"
+max_width_str = f"max-width: {80}%;"
 st.markdown(f"""
         <style>
         .appview-container .main .block-container{{{max_width_str}}}
