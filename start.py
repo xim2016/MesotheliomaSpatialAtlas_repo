@@ -72,7 +72,7 @@ chosen_tab = hc.nav_bar(
         override_theme=over_theme,
         use_animation= bool(True),
         hide_streamlit_markers=bool(True), 
-        sticky_mode='sticky'
+        sticky_mode='top'
     )
 
 
