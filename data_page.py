@@ -19,14 +19,14 @@ def get_current_checkedBox(options):
     return (key)      
 
 
-max_width_str = f"max-width: {95}%;"
-st.markdown(f"""
-        <style>
-        .appview-container .main .block-container{{{max_width_str}}}
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
+# max_width_str = f"max-width: {95}%;"
+# st.markdown(f"""
+#         <style>
+#         .appview-container .main .block-container{{{max_width_str}}}
+#         </style>
+#         """,
+#         unsafe_allow_html=True,
+#     )
 
 
 def data_page():
