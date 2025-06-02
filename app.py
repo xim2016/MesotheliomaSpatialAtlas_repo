@@ -22,14 +22,6 @@ st.set_page_config(
 #     start_page()
 
 
-st.set_page_config(
-        # layout='wide',
-        page_title='Mesothelioma Spatial Atlas',
-        page_icon="./assets/figures/meso_ribbon.png",
-        initial_sidebar_state="collapsed"
-        # initial_sidebar_state="collapsed",
-)
-
 max_width_str = f"max-width: {50}%;"
 st.markdown(f"""
         <style>
