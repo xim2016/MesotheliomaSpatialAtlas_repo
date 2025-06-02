@@ -34,7 +34,7 @@ with open( "font.css" ) as css:
 # padding_bottom = 0
 # define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
     
-max_width_str = f"max-width: {80}%;"
+max_width_str = f"max-width: {95}%;"
 st.markdown(f"""
         <style>
         .appview-container .main .block-container{{{max_width_str}}},
