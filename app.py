@@ -4,7 +4,7 @@ from start_page import start_page
 from mobile.start_page_mobile import start_page_mobile
 
 st.set_page_config(
-        # layout='wide',
+        layout='wide',
         page_title='Mesothelioma Spatial Atlas',
         page_icon="./assets/figures/meso_ribbon.png",
         # initial_sidebar_state="collapsed",
