@@ -79,4 +79,4 @@ with cm:
 
 
     st.divider()
-    # st.markdown(footer,unsafe_allow_html=True) 
+    st.markdown(footer,unsafe_allow_html=True) 
