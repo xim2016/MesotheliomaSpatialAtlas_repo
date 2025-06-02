@@ -25,14 +25,7 @@ st.markdown(f"""
         unsafe_allow_html=True,
     )
 
-hide_default_format = """
-       <style>
-       .block-container {
-           padding-top: 0rem;
-       }
-       </style>
-       """
-st.markdown(hide_default_format, unsafe_allow_html=True)
+
  
 def start_page():
     # disable streamlit warning
