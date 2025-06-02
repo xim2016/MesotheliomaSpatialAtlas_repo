@@ -157,8 +157,8 @@ def citation_page():
         """
         st.markdown(mla_button,  unsafe_allow_html=True)
     with c3: 
-        img =  Image.open('./assets/figures/Lung_Line.jpg')
-        st.image(img)  
-    #     st.image("./assets/figures/Lung_Line.jpg", width=300)
+        # img =  Image.open('./assets/figures/Lung_Line.jpg')
+        # st.image(img)  
+        st.image("./assets/figures/Lung_Line.jpg", width=300)
 
     st.markdown("#")
