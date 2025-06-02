@@ -15,7 +15,7 @@ st.set_page_config(
         initial_sidebar_state="collapsed"
         # initial_sidebar_state="collapsed",
 )
-st.write("can you see me?")
+
 max_width_str = f"max-width: {50}%;"
 st.markdown(f"""
         <style>
@@ -27,7 +27,7 @@ st.markdown(f"""
 
 def start_page():
     #disable streamlit warning
-
+    st.write("can you see me?")    
     st.markdown(page_style, unsafe_allow_html=True) ## Footer
     # change font
     with open( "font.css" ) as css:
