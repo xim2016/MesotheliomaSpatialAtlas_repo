@@ -8,6 +8,23 @@ import hydralit_components as hc
 
 from style import page_style, footer
 
+st.set_page_config(
+        layout='wide',
+        page_title='Mesothelioma Spatial Atlas',
+        page_icon="./assets/figures/meso_ribbon.png",
+        initial_sidebar_state="collapsed"
+        # initial_sidebar_state="collapsed",
+)
+
+max_width_str = f"max-width: {80}%;"
+st.markdown(f"""
+        <style>
+        .appview-container .main .block-container{{{max_width_str}}}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
 def start_page():
     #disable streamlit warning
 
