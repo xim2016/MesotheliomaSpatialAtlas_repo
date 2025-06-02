@@ -42,17 +42,15 @@ chosen_tab = hc.nav_bar(
     )
 
 
-st.set_page_config(
-        layout='wide',
-        page_title='Mesothelioma Spatial Atlas',
-        page_icon="./assets/figures/meso_ribbon.png",
-        initial_sidebar_state="collapsed"
-        # initial_sidebar_state="collapsed",
-)
+# st.set_page_config(
+#         layout='wide',
+#         page_title='Mesothelioma Spatial Atlas',
+#         page_icon="./assets/figures/meso_ribbon.png",
+#         initial_sidebar_state="collapsed"
+#         # initial_sidebar_state="collapsed",
+# )
 
-st.elements.utils._shown_default_value_warning=True
-
-
+# st.elements.utils._shown_default_value_warning=True
 
 
 # st.markdown(page_style, unsafe_allow_html=True) ## Footer
@@ -68,14 +66,14 @@ st.elements.utils._shown_default_value_warning=True
 # padding_bottom = 0
 # define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
     
-max_width_str = f"max-width: {80}%;"
-st.markdown(f"""
-        <style>
-        .appview-container .main .block-container{{{max_width_str}}},
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
+# max_width_str = f"max-width: {80}%;"
+# st.markdown(f"""
+#         <style>
+#         .appview-container .main .block-container{{{max_width_str}}},
+#         </style>
+#         """,
+#         unsafe_allow_html=True,
+#     )
 
 # hide_default_format = """
 #        <style>
