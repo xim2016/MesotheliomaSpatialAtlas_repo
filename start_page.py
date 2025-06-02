@@ -42,21 +42,7 @@ def start_page():
     # padding_left =  0
     # padding_bottom = 0
     # define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
-        
-
-            
-    hide_default_format = """
-       <style>
-       .block-container {
-           padding-top: 0rem;
-       }
-       header[data-testid="stHeader"] {
-           display: none;
-       }
-       footer {visibility: hidden;}
-       </style>
-       """
-    st.markdown(hide_default_format, unsafe_allow_html=True)        
+    
 
     menu_data = [
             {'icon': "🏠", 'label':"About"},
