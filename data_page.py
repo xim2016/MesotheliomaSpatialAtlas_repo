@@ -214,22 +214,22 @@ def data_page():
 
             if is_url_image(imgurl):
                 #show_plotly_image(imgurl, 750)
-                				st.image(imgurl)
+                st.image(imgurl)
 				
-				img = requests.get(imgurl)
-				image_data = img.content
+                img = requests.get(imgurl)
+                image_data = img.content
 				
-				st.markdown(f"[Click here to view full size image. :material/open_in_new:]({imgurl})")
+                st.markdown(f"[Click here to view full size image. :material/open_in_new:]({imgurl})")
 				
 				# Button to open image in another window
 				
-				st.download_button(
-					label="Download image",
-					data=image_data,
-					file_name=filename,
-					mime="image/png",
-					type="primary",
-					icon=":material/download:"
+                st.download_button(
+                      label="Download image",
+                      data=image_data,
+                      file_name=filename,
+                      mime="image/png",
+                      type="primary",
+                      icon=":material/download:"
 				)
             else:
                 st.markdown("#")
