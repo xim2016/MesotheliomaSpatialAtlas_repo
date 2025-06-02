@@ -9,7 +9,7 @@ import hydralit_components as hc
 from style import page_style, footer
 
 st.set_page_config(
-        layout='wide',
+        # layout='wide',
         page_title='Mesothelioma Spatial Atlas',
         page_icon="./assets/figures/meso_ribbon.png",
         # initial_sidebar_state="collapsed"
