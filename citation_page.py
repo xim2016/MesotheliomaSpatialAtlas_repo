@@ -41,12 +41,12 @@ import urllib.parse
 
 def citation_page():
     
-    max_width = '90%'
-    padding_top = '0rem'
-    padding_right = '0rem'
-    padding_left = '13rem'
-    padding_bottom = '0rem'
-    define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
+    # max_width = '90%'
+    # padding_top = '0rem'
+    # padding_right = '0rem'
+    # padding_left = '13rem'
+    # padding_bottom = '0rem'
+    # define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
    
     
     # st.markdown(f"<p style='color: black; font-weight: bold'>Citation guidelines for the Mesothelioma Spatial Atlas</h2>", unsafe_allow_html=True)
