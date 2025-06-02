@@ -21,6 +21,24 @@ st.set_page_config(
 st.elements.utils._shown_default_value_warning=True
 
 
+menu_data = [
+        {'icon': "🏠", 'label':"About"},
+        {'icon':"📊",'label':"Data"},
+        {'icon':"☎️",'label':"Contact"},
+        {'icon':"📲",'label':"Citation"},
+        
+    ]
+over_theme = {'txc_inactive': 'white','menu_background':'#0f4d92','txc_active':'black'} #2e5090#0F52BA #048bbc #016490
+
+
+chosen_tab = hc.nav_bar(
+        menu_definition=menu_data,
+        override_theme=over_theme,
+        use_animation= bool(True),
+        hide_streamlit_markers=bool(True), 
+        sticky_mode='top'
+    )
+
 # st.markdown(page_style, unsafe_allow_html=True) ## Footer
 
 # # change font
@@ -57,23 +75,23 @@ hide_default_format = """
 st.markdown(hide_default_format, unsafe_allow_html=True)
 
 
-menu_data = [
-        {'icon': "🏠", 'label':"About"},
-        {'icon':"📊",'label':"Data"},
-        {'icon':"☎️",'label':"Contact"},
-        {'icon':"📲",'label':"Citation"},
+# menu_data = [
+#         {'icon': "🏠", 'label':"About"},
+#         {'icon':"📊",'label':"Data"},
+#         {'icon':"☎️",'label':"Contact"},
+#         {'icon':"📲",'label':"Citation"},
         
-    ]
-over_theme = {'txc_inactive': 'white','menu_background':'#0f4d92','txc_active':'black'} #2e5090#0F52BA #048bbc #016490
+#     ]
+# over_theme = {'txc_inactive': 'white','menu_background':'#0f4d92','txc_active':'black'} #2e5090#0F52BA #048bbc #016490
 
 
-chosen_tab = hc.nav_bar(
-        menu_definition=menu_data,
-        override_theme=over_theme,
-        use_animation= bool(True),
-        hide_streamlit_markers=bool(True), 
-        sticky_mode='top'
-    )
+# chosen_tab = hc.nav_bar(
+#         menu_definition=menu_data,
+#         override_theme=over_theme,
+#         use_animation= bool(True),
+#         hide_streamlit_markers=bool(True), 
+#         sticky_mode='top'
+#     )
 
 
 _, cm, _ = st.columns([1,15,1])
