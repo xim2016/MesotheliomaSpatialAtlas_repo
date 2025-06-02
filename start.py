@@ -11,7 +11,7 @@ from style import page_style, footer
 
 
 st.set_page_config(
-        layout='wide',
+        # layout='wide',
         page_title='Mesothelioma Spatial Atlas',
         page_icon="./assets/figures/meso_ribbon.png",
         initial_sidebar_state="collapsed"
@@ -34,7 +34,7 @@ with open( "font.css" ) as css:
 # padding_bottom = 0
 # define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
     
-max_width_str = f"max-width: {50}%;"
+max_width_str = f"max-width: {80}%;"
 st.markdown(f"""
         <style>
         .appview-container .main .block-container{{{max_width_str}}},
