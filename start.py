@@ -63,6 +63,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.set_page_config(layout="wide", initial_sidebar_state="auto")
+
 menu_data = [
         {'icon': "🏠", 'label':"About"},
         {'icon':"📊",'label':"Data"},
