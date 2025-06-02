@@ -23,9 +23,9 @@ st.elements.utils._shown_default_value_warning=True
 
 # st.markdown(page_style, unsafe_allow_html=True) ## Footer
 
-# change font
-with open( "font.css" ) as css:
-    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
+# # change font
+# with open( "font.css" ) as css:
+#     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 # max_width = 2000
 # padding_top = 0.5
@@ -38,21 +38,16 @@ max_width_str = f"max-width: {80}%;"
 st.markdown(f"""
         <style>
         .appview-container .main .block-container{{{max_width_str}}},
-        # .block-container {
-        #     padding-top: 1rem;
-        #     padding-bottom: 1rem;
-        # }
+        .block-container {
+            padding-top: 0rem;
+            padding-bottom: 1rem;
+        }
         </style>
         """,
         unsafe_allow_html=True,
     )
 
-reduce_header_height_style = """
-    <style>
-        div.block-container {padding-top:1rem;}
-    </style>
-"""
-st.markdown(reduce_header_height_style, unsafe_allow_html=True)
+
 
 menu_data = [
         {'icon': "🏠", 'label':"About"},
