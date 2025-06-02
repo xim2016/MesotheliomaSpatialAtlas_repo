@@ -15,7 +15,7 @@ st.set_page_config(
         initial_sidebar_state="collapsed"
         # initial_sidebar_state="collapsed",
 )
-
+st.wirte("can you see me?")
 max_width_str = f"max-width: {50}%;"
 st.markdown(f"""
         <style>
