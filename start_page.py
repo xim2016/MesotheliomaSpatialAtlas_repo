@@ -24,7 +24,7 @@ st.markdown(f"""
         """,
         unsafe_allow_html=True,
     )
-st.write("can you see me?")  
+ 
 # def start_page():
     #disable streamlit warning
       
