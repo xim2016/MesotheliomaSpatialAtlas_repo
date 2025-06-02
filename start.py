@@ -38,16 +38,30 @@ max_width_str = f"max-width: {80}%;"
 st.markdown(f"""
         <style>
         .appview-container .main .block-container{{{max_width_str}}},
-        .block-container {
-            padding-top: 0rem;
-            padding-bottom: 1rem;
-        }
         </style>
         """,
         unsafe_allow_html=True,
     )
 
+st.markdown(
+    """
+    <style>
+        .block-container {
+            padding-top: 0rem !important;
+        }
 
+        header[data-testid="stHeader"] {
+            margin-top: 0rem;
+            padding-top: 0rem;
+        }
+
+        .main {
+            padding-top: 0rem;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 menu_data = [
         {'icon': "🏠", 'label':"About"},
