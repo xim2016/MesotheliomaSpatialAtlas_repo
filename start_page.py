@@ -1,6 +1,6 @@
 import streamlit as st
 # from streamlit_option_menu import option_menu
-from data_page import data_page
+# from data_page import data_page
 from contact_page import contact_page
 from home_page import home_page
 from citation_page import citation_page
@@ -25,7 +25,7 @@ st.markdown(f"""
         unsafe_allow_html=True,
     )
 st.write("can you see me?")  
-def start_page():
+# def start_page():
     #disable streamlit warning
       
     # st.markdown(page_style, unsafe_allow_html=True) ## Footer
