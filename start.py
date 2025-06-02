@@ -9,16 +9,18 @@ import hydralit_components as hc
 from style import page_style, footer
 
 #disable streamlit warning
-
-st.set_page_config(
-        layout='wide',
-        page_title='Mesothelioma Spatial Atlas',
-        page_icon="./assets/figures/meso_ribbon.png",
-        initial_sidebar_state="collapsed"
-        # initial_sidebar_state="collapsed",
-)
-
-st.elements.utils._shown_default_value_warning=True
+hide_default_format = """
+       <style>
+       .block-container {
+           padding-top: 0rem;
+       }
+       header[data-testid="stHeader"] {
+           display: none;
+       }
+       footer {visibility: hidden;}
+       </style>
+       """
+st.markdown(hide_default_format, unsafe_allow_html=True)
 
 
 menu_data = [
@@ -38,6 +40,20 @@ chosen_tab = hc.nav_bar(
         hide_streamlit_markers=bool(True), 
         sticky_mode='top'
     )
+
+
+st.set_page_config(
+        layout='wide',
+        page_title='Mesothelioma Spatial Atlas',
+        page_icon="./assets/figures/meso_ribbon.png",
+        initial_sidebar_state="collapsed"
+        # initial_sidebar_state="collapsed",
+)
+
+st.elements.utils._shown_default_value_warning=True
+
+
+
 
 # st.markdown(page_style, unsafe_allow_html=True) ## Footer
 
@@ -61,18 +77,18 @@ st.markdown(f"""
         unsafe_allow_html=True,
     )
 
-hide_default_format = """
-       <style>
-       .block-container {
-           padding-top: 0rem;
-       }
-       header[data-testid="stHeader"] {
-           display: none;
-       }
-       footer {visibility: hidden;}
-       </style>
-       """
-st.markdown(hide_default_format, unsafe_allow_html=True)
+# hide_default_format = """
+#        <style>
+#        .block-container {
+#            padding-top: 0rem;
+#        }
+#        header[data-testid="stHeader"] {
+#            display: none;
+#        }
+#        footer {visibility: hidden;}
+#        </style>
+#        """
+# st.markdown(hide_default_format, unsafe_allow_html=True)
 
 
 # menu_data = [
