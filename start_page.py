@@ -28,7 +28,7 @@ st.markdown(f"""
 def start_page():
     #disable streamlit warning
     st.write("can you see me?")    
-    st.markdown(page_style, unsafe_allow_html=True) ## Footer
+    # st.markdown(page_style, unsafe_allow_html=True) ## Footer
     # change font
     with open( "font.css" ) as css:
         st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
