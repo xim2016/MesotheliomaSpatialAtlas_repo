@@ -24,10 +24,10 @@ st.markdown(f"""
         """,
         unsafe_allow_html=True,
     )
-
+st.write("can you see me?")  
 def start_page():
     #disable streamlit warning
-    st.write("can you see me?")    
+      
     # st.markdown(page_style, unsafe_allow_html=True) ## Footer
     # # change font
     # with open( "font.css" ) as css:
