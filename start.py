@@ -55,7 +55,8 @@ over_theme = {'txc_inactive': 'white','menu_background':'#0f4d92','txc_active':'
 chosen_tab = hc.nav_bar(
         menu_definition=menu_data,
         override_theme=over_theme,
-        hide_streamlit_markers=False, 
+        use_animation= bool(True),
+        hide_streamlit_markers=bool(True), 
         # sticky_mode='pinned'
     )
 
@@ -75,7 +76,6 @@ with cm:
     elif chosen_tab == "Citation":
         citation_page()
 
-    # for i in range(1):
-    #     st.markdown('#')
+
     st.divider()
-    st.markdown(footer,unsafe_allow_html=True) 
+    # st.markdown(footer,unsafe_allow_html=True) 
