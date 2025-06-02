@@ -25,25 +25,18 @@ def data_page():
     REPO_TMA = 'https://raw.githubusercontent.com/xim2016/MesotheliomaSpatialAtlas_data/main'
  
 
-    max_width = '100%'
-    padding_top = '0rem'
-    padding_right = '0rem'
-    padding_left = '0rem'
-    padding_bottom = '0rem'
-    define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
+    # max_width = '100%'
+    # padding_top = '0rem'
+    # padding_right = '0rem'
+    # padding_left = '0rem'
+    # padding_bottom = '0rem'
+    # define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
     
     st.markdown("""
     <style>
         [data-testid=stSidebar] {
             background-color: white;
         }
-    #     [data-testid="stSidebar"][aria-expanded="true"] > div:first-child{
-    #     width: 300px;
-    # }
-    # [data-testid="stSidebar"][aria-expanded="false"] > div:first-child{
-    #     width: 300px;
-    #     margin-left: -100px;
-    # }
     </style>
     """, unsafe_allow_html=True)
 
