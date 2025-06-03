@@ -6,7 +6,7 @@ from home_page import home_page
 from citation_page import citation_page
 import hydralit_components as hc
 
-# from style import page_style, footer
+from style import page_style, footer
 
 st.set_page_config(
         # layout='wide',
