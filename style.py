@@ -5,7 +5,7 @@ footer="""
   
     .image 
     { 
-        padding: 10px;
+        padding: 5px;
         transition: transform .2s;
     }
 
