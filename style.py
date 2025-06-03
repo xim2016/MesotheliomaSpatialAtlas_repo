@@ -6,7 +6,7 @@ footer="""
     .image 
     { 
         padding: 10px;
-        transition: transform .1s;
+        transition: transform .2s;
     }
 
 
@@ -23,7 +23,7 @@ footer="""
         background-color: white;
         margin-top: auto;
         color: black;
-        padding: 24px;
+        padding: 0px;
         text-align: center;
     }
 </style>
