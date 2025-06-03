@@ -23,7 +23,7 @@ footer="""
         background-color: white;
         margin-top: auto;
         color: black;
-        padding: 0px;
+        padding: 24px;
         text-align: center;
     }
 </style>
