@@ -163,5 +163,4 @@ def citation_page():
 
     st.markdown("#")
 
-    import sys
-    st.write(f"Running Python version: `{sys.version}`")
+    
