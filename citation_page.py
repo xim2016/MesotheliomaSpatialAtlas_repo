@@ -162,3 +162,6 @@ def citation_page():
         st.image("./assets/figures/Lung_Line.jpg", width=300)
 
     st.markdown("#")
+
+    import sys
+    st.write(f"Running Python version: `{sys.version}`")
