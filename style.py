@@ -29,7 +29,7 @@ footer="""
 </style>
 
 <div class="footer">
-<p style="font-size:  13px">© 2023 Osmanbeyoglulab.com. All rights reserved.</p>
+<p style="font-size:  13px">© 2025 Osmanbeyoglulab.com. All rights reserved.</p>
 <a href="https://www.pitt.edu/"><img class="image" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/University_of_Pittsburgh_seal.svg/300px-University_of_Pittsburgh_seal.svg.png"alt="github" width="45" height="45"></a>
 <a href="https://github.com/osmanbeyoglulab"><img class="image" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github" width="45" height="45"></a>
 <a href="https://twitter.com/hosmanbeyoglu?lang=en"><img class="image" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"alt="twitter" width="45" height="40"></a>
