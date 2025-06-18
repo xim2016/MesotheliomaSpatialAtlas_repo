@@ -24,7 +24,8 @@ def home_page():
     with m1:  
         load_homeImg()
         
-
+    import sys
+    st.write(f"Running Python version: `{sys.version}`")
 
     #     # st.markdown('---')
     # with m2_:
