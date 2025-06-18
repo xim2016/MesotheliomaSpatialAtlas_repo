@@ -28,7 +28,7 @@ def home_page():
     #     # st.markdown('---')
     # with m2_:
         st.markdown("#")
-        st.markdown(f"<p style='text-align: justify; color: black; font-size:18px'>{Desc.Abstract}</h3>", unsafe_allow_html=True) 
+        st.markdown(f"<p style='text-align: justify; color: black; font-size:18px'>{Desc.Abstract}</p>", unsafe_allow_html=True) 
         st.markdown("#")
         st.markdown(' Read our paper from here 👉 https://aacrjournals.org/cancerrescommun/article/4/8/2133/747011/Spatial-Landscape-of-Malignant-Pleural-and')    
 
