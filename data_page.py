@@ -89,9 +89,9 @@ def data_page():
         if len(images) > 0 :
             st.write("")
             st.write("")
-	    st.write("")
-	    st.write("")
-	    st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
             st.markdown("### Please select a core.", True)
             st.write("")
 
