@@ -87,7 +87,7 @@ def data_page():
         images, showedImage_names, showedCore_ids, showedCore_ids2 = load_HEImages(path_img_logo , list(image_names), list(core_ids), list(core_ids2))
 
         if len(images) > 0 :
-	    st.write("")
+            st.write("")
             st.write("")
 	    st.write("")
 	    st.write("")
