@@ -8,7 +8,7 @@ import hydralit_components as hc
 
 from style import page_style, footer
 
-
+# For Google analytics track
 import streamlit.components.v1 as components
 
 def inject_google_tag():
@@ -26,7 +26,7 @@ def inject_google_tag():
 
 # Call the function at the start of your app
 inject_google_tag()
-
+# end of the track
 
 
 st.set_page_config(
@@ -113,5 +113,6 @@ with cm:
 
     st.divider()
     st.markdown(footer,unsafe_allow_html=True) 
+
 
 
