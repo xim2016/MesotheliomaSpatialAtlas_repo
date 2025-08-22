@@ -7,7 +7,7 @@ from citation_page import citation_page
 import hydralit_components as hc
 
 from style import page_style, footer
-
+import streamlit.components.v1 as components
 
 
 st.set_page_config(
@@ -94,3 +94,4 @@ with cm:
 
     st.divider()
     st.markdown(footer,unsafe_allow_html=True) 
+
