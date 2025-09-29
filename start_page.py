@@ -11,6 +11,10 @@ from style import page_style, footer
 # For Google analytics track
 import streamlit.components.v1 as components
 
+import sys
+st.write("**Python version:**", sys.version)
+st.write("**Streamlit version:**", st.__version__)
+
 def inject_google_tag():
     GA_JS = """
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2G8Q99WCS"></script>
