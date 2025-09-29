@@ -17,7 +17,11 @@ def home_page():
     # padding_bottom = '0rem'
     # define_layout(max_width, padding_top, padding_right, padding_left, padding_bottom)
     
-   
+    
+    import sys
+    st.write("**Python version:**", sys.version)
+    st.write("**Streamlit version:**", st.__version__)
+
     _,m1,_ = st.columns([1,5,1])
 
     
@@ -32,8 +36,5 @@ def home_page():
         # st.markdown("#")
         st.markdown(' Read our paper from here 👉 https://aacrjournals.org/cancerrescommun/article/4/8/2133/747011/Spatial-Landscape-of-Malignant-Pleural-and')    
 
-       
-    import sys
-    st.write("**Python version:**", sys.version)
-    st.write("**Streamlit version:**", st.__version__)
+      
 
