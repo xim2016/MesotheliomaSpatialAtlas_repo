@@ -33,4 +33,7 @@ def home_page():
         st.markdown(' Read our paper from here 👉 https://aacrjournals.org/cancerrescommun/article/4/8/2133/747011/Spatial-Landscape-of-Malignant-Pleural-and')    
 
        
-    
+    import sys
+    st.write("**Python version:**", sys.version)
+    st.write("**Streamlit version:**", st.__version__)
+
