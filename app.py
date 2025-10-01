@@ -14,7 +14,7 @@ def inject_google_tag():
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
-          gtag('config', 'G-GJ8KNPB8W8');
+          gtag('config', 'G-GJ8KNPB8W8', {{ 'debug_mode': true }});
     </script>
     """
     st.write("")
