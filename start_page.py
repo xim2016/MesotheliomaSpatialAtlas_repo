@@ -11,8 +11,6 @@ from style import page_style, footer
 # For Google analytics track
 import streamlit.components.v1 as components
 
-
-
 def inject_google_tag():
     GA_JS = """
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2G8Q99WCS"></script>
@@ -24,8 +22,7 @@ def inject_google_tag():
           gtag('config', 'G-W2G8Q99WCS');
     </script>
     """
-    st.markdown(GA_JS, unsafe_allow_html=True)
-    # components.html(GA_JS, height=0)
+    components.html(GA_JS, height=0, width=0)
 
 # Call the function at the start of your app
 inject_google_tag()
