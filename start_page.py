@@ -24,7 +24,8 @@ def inject_google_tag():
           gtag('config', 'G-W2G8Q99WCS');
     </script>
     """
-    components.html(GA_JS, height=0)
+    st.markdown(GA_JS, unsafe_allow_html=True)
+    # components.html(GA_JS, height=0)
 
 # Call the function at the start of your app
 inject_google_tag()
